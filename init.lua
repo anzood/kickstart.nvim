@@ -93,6 +93,10 @@ vim.g.maplocalleader = ' '
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = true
 
+-- Disable Netrw
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 -- [[ Setting options ]]
 -- See `:help vim.opt`
 -- NOTE: You can change these options as you wish!
@@ -192,6 +196,16 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
+
+-- Use Neo-tree
+vim.api.nvim_create_autocmd('VimEnter', {
+  callback = function()
+    local first_arg = vim.fn.argv(0)
+    if first_arg and vim.fn.isdirectory(first_arg) == 1 then
+      vim.cmd.Neotree(first_arg)
+    end
+  end,
+})
 
 -- Highlight when yanking (copying) text
 --  Try it with `yap` in normal mode
