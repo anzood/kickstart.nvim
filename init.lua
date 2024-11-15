@@ -171,6 +171,17 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 -- Diagnostic keymaps
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
+-- Move by screen lines
+-- Normal mode
+vim.keymap.set('n', 'j', 'gj', { noremap = true })
+vim.keymap.set('n', 'k', 'gk', { noremap = true })
+vim.keymap.set('n', '<Up>', 'g<Up>', { noremap = true })
+vim.keymap.set('n', '<Down>', 'g<Down>', { noremap = true })
+
+-- Insert mode
+vim.keymap.set('i', '<Up>', '<C-o>g<Up>', { noremap = true })
+vim.keymap.set('i', '<Down>', '<C-o>g<Down>', { noremap = true })
+
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
 -- is not what someone will guess without a bit more experience.
