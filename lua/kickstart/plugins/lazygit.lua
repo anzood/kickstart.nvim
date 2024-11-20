@@ -18,7 +18,8 @@ return {
     },
     -- Add a keymap to open lazygit
     keys = {
-      { '<leader>gg', '<cmd>LazyGit<CR>', desc = 'Open LazyGit' },
+      { '<leader>gg', '<cmd>LazyGit<CR>', desc = 'Open Lazy[G]it' },
     },
   },
-} 
+}
+

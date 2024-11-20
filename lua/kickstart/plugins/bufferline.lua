@@ -235,13 +235,13 @@ return {
     { '<S-h>', '<cmd>BufferLineCyclePrev<cr>', desc = 'Previous buffer' },
     { '<S-l>', '<cmd>BufferLineCycleNext<cr>', desc = 'Next buffer' },
     -- Close current buffer
-    { '<leader>bc', '<cmd>SafeCloseBuffer<cr>', desc = 'Close current buffer' },
+    { '<leader>bc', '<cmd>SafeCloseBuffer<cr>', desc = '[C]lose current buffer' },
     -- Close all buffers except current
-    { '<leader>bo', '<cmd>BufferLineCloseOthers<cr>', desc = 'Close other buffers' },
+    { '<leader>bo', '<cmd>BufferLineCloseOthers<cr>', desc = 'Close [o]ther buffers' },
     -- Buffer picking
-    { '<leader>bp', '<cmd>BufferLinePick<cr>', desc = 'Pick buffer' },
+    { '<leader>bp', '<cmd>BufferLinePick<cr>', desc = '[P]ick buffer' },
     -- Move buffer position
-    { '<leader>bl', '<cmd>BufferLineMoveNext<cr>', desc = 'Move buffer right' },
-    { '<leader>bh', '<cmd>BufferLineMovePrev<cr>', desc = 'Move buffer left' },
+    { '<leader>bl', '<cmd>BufferLineMoveNext<cr>', desc = '[l]Move buffer right' },
+    { '<leader>bh', '<cmd>BufferLineMovePrev<cr>', desc = '[h]Move buffer left' },
   },
 }
